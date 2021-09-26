@@ -1,0 +1,15 @@
+{
+  "name": "Electronjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Schied",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^15.0.0"
+  }
+}
