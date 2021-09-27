@@ -1,7 +1,7 @@
 
 let text = document.getElementById('nick');
 
-if(window.localStorage.getItem('user')){
+if(window.sessionStorage.getItem('isLoggedIn')){
     let obj = JSON.parse(window.localStorage.getItem('user'));
     text.textContent = text.textContent + obj.user;
 

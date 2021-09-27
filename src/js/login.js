@@ -7,9 +7,10 @@ function validate(){
         pass: pass.value
     }
     window.localStorage.setItem('user', JSON.stringify(person));
+    window.sessionStorage.setItem('isLoggedIn', true);
 }
 
-if(window.localStorage.getItem('user')){
+if(window.sessionStorage.getItem('isLoggedIn')){
     window.location.href = "../views/main.html"
 
 }else{
