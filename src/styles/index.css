@@ -6,3 +6,35 @@
 body{
     background-color: white;
 }
+
+.slider {
+			  -webkit-appearance: none;
+			  width: 100%;
+			  height: 10px;
+			  border-radius: 5px;  
+			  background: rgb(124, 120, 120);
+			  outline: none;
+			}
+
+			.slider::-webkit-slider-thumb {
+			  -webkit-appearance: none;
+			  appearance: none;
+			  width: 15px;
+			  height: 15px;
+			  border-radius: 50%; 
+			  background: #4561EB;
+			  cursor: pointer;
+			}
+            .slider ::-moz-range-progress {
+                height: 10px;
+                border-radius: 5%;
+                background: #4561EB;
+              }
+
+			.slider::-moz-range-thumb {
+			  width: 15px;
+			  height: 15px;
+			  border-radius: 50%;
+			  background: #4561EB;
+			  cursor: pointer;
+			}

@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Menu</title>
     <link rel="stylesheet" href="../styles/index.css">
 </head>
@@ -13,6 +11,23 @@
     
     <h1>Welcome to the menu</h1>
     <h2 id="nick">Bienvenido </h2>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="../js/test.js"></script>
+    
+    <div id="items-songs">
+        <div class="item-song" id="items">
+            <label for=""></label>
+            <button onclick="play()">Reproducir</button>
+            <h2>Duracion: <span id="duration"></span></h2>
+
+            <input type="range" class="slider" min="1" max="100" value="0" style="box-sizing: border-box; width: 100%" onchange="seekSong()" id="txtduration">
+            
+            <button onclick="seekSong()">Saltar</button>
+    
+        </div>
+        
+    </div>
+    
+
 </body>
 </html>
