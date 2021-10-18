@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 let text = document.getElementById('nick');
 let item = document.getElementById('item-song');
 
@@ -78,12 +76,9 @@ let getDuration = function (url, next) {
   _player.play();
   //waiting...
 };
->>>>>>> Stashed changes
 
-let text = document.getElementById('nick');
-
-if(window.localStorage.getItem('user')){
-    let obj = JSON.parse(window.localStorage.getItem('user'));
+if(window.sessionStorage.getItem('user')){
+    let obj = JSON.parse(window.sessionStorage.getItem('user'));
     text.textContent = text.textContent + obj.user;
 
 }else{

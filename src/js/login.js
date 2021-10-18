@@ -6,10 +6,10 @@ function validate(){
         user: user.value,
         pass: pass.value
     }
-    window.localStorage.setItem('user', JSON.stringify(person));
+    window.sessionStorage.setItem('user', JSON.stringify(person));
 }
 
-if(window.localStorage.getItem('user')){
+if(window.sessionStorage.getItem('user')){
     window.location.href = "../views/main.html"
 
 }else{
