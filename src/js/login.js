@@ -1,17 +1,42 @@
-function validate(){
+function validate() {
     let user = document.getElementById("user");
     let pass = document.getElementById("password");
 
     const person = {
         user: user.value,
-        pass: pass.value
+        password: pass.value
     }
-    window.sessionStorage.setItem('user', JSON.stringify(person));
+    var formData = new FormData();
+    formData.append("user", user.value);
+    formData.append("password", pass.value);
+    fetch('http://localhost:3000/auth/signin', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(person)
+    }).then(
+        response => response.json()
+    ).then(
+        success => {
+            if(success.token){
+                window.sessionStorage.setItem('token', success.token);
+                window.sessionStorage.setItem('isLoggedin', true);
+            }         
+            verifySession();
+        }
+    ).catch(
+        error => console.log(error)
+    );
+
+}
+function verifySession() {
+    if (window.sessionStorage.getItem('isLoggedin')) {
+        window.location.href = "../views/main.html"
+    } else {
+        console.log('No hay datos');
+    }
 }
 
-if(window.sessionStorage.getItem('user')){
-    window.location.href = "../views/main.html"
-
-}else{
-    console.log('No hay datos');   
-}
+verifySession();
