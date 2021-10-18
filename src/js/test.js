@@ -3,7 +3,7 @@ let item = document.getElementById('item-song');
 
 
 let index = 0;
-let songs = ['6153204d05674c16c4e65024','6152229869312205e47ce853','615222ca69312205e47ce86a'];
+let songs = ['6158e35c14bd13c81b4f8aff','6158e31f14bd13c81b4f8ae4','615c5743e6a5ee6d8e05c6ce'];
 let isplaying = false;
 let sound = plays(songs[index]);
 let timeC = 10;  
@@ -21,15 +21,15 @@ function next(){
 }
 function plays(id){
     let sound = new Howl({
-        src: ['http://localhost:3000/tracks/'+id],
+        src: ['https://api-audio.herokuapp.com/songs/'+id],
         html5: true,
-        preload: 'none',
+        preload: 'auto',
 
       });
       sound.on('play', function(){
         //dura.textContent = "hola";
         isplaying = true;
-        getDuration ('http://localhost:3000/tracks/'+songs[index], function (duration) {
+        getDuration ('https://api-audio.herokuapp.com/songs/'+songs[index], function (duration) {
           timeC = duration;                             
         });
         seekBar();
@@ -77,9 +77,8 @@ let getDuration = function (url, next) {
   //waiting...
 };
 
-
-if(window.sessionStorage.getItem('isLoggedIn')){
-    let obj = JSON.parse(window.localStorage.getItem('user'));
+if(window.sessionStorage.getItem('user')){
+    let obj = JSON.parse(window.sessionStorage.getItem('user'));
     text.textContent = text.textContent + obj.user;
 
 }else{
