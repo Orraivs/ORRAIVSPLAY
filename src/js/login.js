@@ -1,3 +1,7 @@
+const button = document.getElementById("button");
+
+button.addEventListener('click', validate);
+
 function validate() {
     let user = document.getElementById("user");
     let pass = document.getElementById("password");
