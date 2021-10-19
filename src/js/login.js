@@ -1,14 +1,10 @@
 function validate() {
     let user = document.getElementById("user");
     let pass = document.getElementById("password");
-
     const person = {
         user: user.value,
         password: pass.value
     }
-    var formData = new FormData();
-    formData.append("user", user.value);
-    formData.append("password", pass.value);
     fetch('http://localhost:3000/auth/signin', {
         method: 'POST',
         headers: {
@@ -23,8 +19,11 @@ function validate() {
             if(success.token){
                 window.sessionStorage.setItem('token', success.token);
                 window.sessionStorage.setItem('isLoggedin', true);
+                verifySession();
+            }else{
+                //ERROR
             }         
-            verifySession();
+            
         }
     ).catch(
         error => console.log(error)

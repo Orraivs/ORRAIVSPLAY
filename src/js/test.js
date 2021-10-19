@@ -1,6 +1,11 @@
 let text = document.getElementById('nick');
 let item = document.getElementById('item-song');
+let logout = document.getElementById('logout');
 
+logout.addEventListener('click', ()=>{
+  window.sessionStorage.clear();
+  window.location.href = "../views/login.html";
+});
 
 let index = 0;
 let songs = ['6158e35c14bd13c81b4f8aff', '6158e31f14bd13c81b4f8ae4', '615c5743e6a5ee6d8e05c6ce'];
@@ -79,7 +84,30 @@ let getDuration = function (url, next) {
 
 function verifySession() {
   if (window.sessionStorage.getItem('isLoggedin')) {
-    console.log(window.sessionStorage.getItem('token'));
+    const auth = {
+      token: window.sessionStorage.getItem('token')
+    }
+    fetch('http://localhost:3000/auth/verify', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(auth)
+    }).then(
+      response => response.json()
+    ).then(
+      success => {
+        if (success.user) {
+          console.log(success.user);
+          text.textContent = text.textContent + success.user.user;
+        }else{
+          //ERROR
+        }
+      }
+    ).catch(
+      error => console.log(error)
+    );
     /*let obj = JSON.parse(window.sessionStorage.getItem('token'));
     text.textContent = text.textContent + obj.user;*/
 
