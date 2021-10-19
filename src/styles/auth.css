@@ -1,9 +1,13 @@
 body{
     font-family: 'Ubuntu', sans-serif;
-    background-color: #545454;
+    background-image: url('../resources/fondo.png');
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+
 }
 
 #box-container {
+    margin: 4rem auto 3rem auto;
     height: 35rem;
     display: flex;
     justify-content: center;
@@ -46,9 +50,6 @@ input {
 }
 
 .title-container{
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
     margin-bottom: 4rem;
 }
 
@@ -83,6 +84,14 @@ input {
     border-radius: 15px;
     padding: 0.5rem 1rem 0.5rem 1rem;
     color: white;
+    cursor: pointer;
+}
+
+.button-recovery{
+    cursor: pointer;
+}
+
+.style-text{
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;

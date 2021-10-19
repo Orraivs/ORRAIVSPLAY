@@ -15,7 +15,7 @@
 <body>
     <div id="box-container">
         <div id="signin-container">
-            <div class="signin-container-item title-container center-text">
+            <div class="signin-container-item title-container center-text style-text">
                 <p>INICIO DE SESION</p>
             </div>
             <div class="signin-container-item inputs">
@@ -37,17 +37,20 @@
 
             </div>
             <div class="signin-container-item">
-                <a href="" class="blue-text">Has olvidado tu contraseña?</a>
+                <a id="Fpassword" class="button-recovery blue-text">Has olvidado tu contraseña?</a>
             </div>
             <div class="signin-container-item button-container center-text">
-                <a href="" id="button" class="button-signin">Iniciar Sesión</a>
+                <a id="button" class="button-signin style-text">Iniciar Sesión</a>
             </div>
             <div class="signin-container-item center-text">
-                <a href="" class="blue-text"> <span class="normal-text">Necesitas una cuenta?</span> Registrate</a>
+                <a href="../views/signup.html" class="blue-text"> <span class="normal-text">Necesitas una cuenta?</span>
+                    Registrate</a>
             </div>
         </div>
     </div>
-    <script src="../js/login.js"></script>
+
+    <script src="../js/swal/sweetalert2.all.min.js"></script>
+    <script src="../js/auth/signin.js"></script>
 </body>
 
 </html>

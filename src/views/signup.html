@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth</title>
+    <link rel="stylesheet" href="../styles/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="box-container">
+        <div id="signin-container">
+            <div class="signin-container-item title-container center-text style-text">
+                <p>REGISTRO</p>
+            </div>
+            <div class="signin-container-item inputs">
+                <div>
+                    <label for="name">NOMBRE</label>
+                </div>
+                <div>
+                    <input type="text" name="name" id="name">
+                </div>
+            </div>
+            <div class="signin-container-item inputs">
+                <div>
+                    <label for="email">CORREO</label>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email">
+                </div>
+            </div>
+            <div class="signin-container-item inputs">
+                <div>
+                    <label for="user">USUARIO</label>
+                </div>
+                <div>
+                    <input type="text" name="user" id="user">
+                </div>
+            </div>
+            <div class="signin-container-item inputs">
+                <div>
+                    <label for="password">CONTRASEÑA</label>
+                </div>
+                <div>
+                    <input type="password" name="password" id="password">
+                </div>
+            </div>
+            <div class="signin-container-item">
+                <a href="../views/signin.html" class="blue-text">Ya tienes una cuenta?</a>
+            </div>
+            <div class="signin-container-item button-container center-text">
+                <a id="button" class="button-signin style-text">Registrarse</a>
+            </div>
+            <!--<div class="signin-container-item center-text">
+                <a href="" class="blue-text"> <span class="normal-text">Necesitas una cuenta?</span> Registrate</a>
+            </div>-->
+        </div>
+    </div>
+    <script src="../js/swal/sweetalert2.all.min.js"></script>
+    <script src="../js/auth/signup.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ let logout = document.getElementById('logout');
 
 logout.addEventListener('click', ()=>{
   window.sessionStorage.clear();
-  window.location.href = "../views/login.html";
+  window.location.href = "../views/signin.html";
 });
 
 let index = 0;
@@ -112,7 +112,7 @@ function verifySession() {
     text.textContent = text.textContent + obj.user;*/
 
   } else {
-    window.location.href = "../views/login.html"
+    window.location.href = "../views/signin.html"
   }
 }
 

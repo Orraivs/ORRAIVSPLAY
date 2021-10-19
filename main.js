@@ -9,7 +9,7 @@ function createWindow () {
       }*/
     })
   
-    win.loadFile(__dirname + '/src/views/login.html')
+    win.loadFile(__dirname + '/src/views/signin.html')
   }
 
 app.whenReady().then(() => {

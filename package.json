@@ -4,12 +4,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "nodemon --watch . --exec electron ."
   },
   "keywords": [],
   "author": "Schied",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^15.0.0"
+    "electron": "^15.0.0",
+    "nodemon": "^2.0.14"
   }
 }
