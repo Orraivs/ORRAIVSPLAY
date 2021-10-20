@@ -96,3 +96,28 @@ input {
     font-size: 18px;
     line-height: 21px;
 }
+
+
+@media only screen and (max-height: 600px) {
+    
+    #box-container {
+        margin: 2rem auto 1rem auto;
+        height: 30rem;
+    }
+}
+
+@media only screen and (min-height: 600px) {
+    
+    #box-container {
+        margin: 2rem;
+        height: 33rem;
+    }
+}
+
+@media only screen and (min-height: 660px) {
+    
+    #box-container {
+        margin: 3rem;
+        height: 35rem;
+    }
+}
