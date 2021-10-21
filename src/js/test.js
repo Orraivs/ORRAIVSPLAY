@@ -87,7 +87,7 @@ function verifySession() {
     const auth = {
       token: window.sessionStorage.getItem('token')
     }
-    fetch('http://localhost:3000/auth/verify', {
+    fetch('https://api-cusers.herokuapp.com/auth/verify', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',

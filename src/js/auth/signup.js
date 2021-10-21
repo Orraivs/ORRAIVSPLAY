@@ -12,7 +12,7 @@ button.addEventListener('click', ()=>{
         password: pass.value
     }
     console.log(person);
-    fetch('http://localhost:3000/user/', {
+    fetch('https://api-cusers.herokuapp.com/user/', {
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
