@@ -10,7 +10,6 @@ function createWindow () {
         preload: path.join(__dirname, '/src/js/preload.js')
       }*/
     })
-  
     win.loadFile(__dirname + '/src/views/signin.html')
   }
 
