@@ -10,6 +10,11 @@
   "author": "Schied",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< Updated upstream
     "electron": "^15.0.0"
+=======
+    "electron": "^15.3.0",
+    "nodemon": "^2.0.14"
+>>>>>>> Stashed changes
   }
 }
